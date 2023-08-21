@@ -1,5 +1,9 @@
 ======== MERN JENKINS PROJECT ==================
 
+https://www.freecodecamp.org/news/automate-mern-app-deployment-with-jenkins/
+
+================================================
+
 Step 1: 
 
 launch servers
