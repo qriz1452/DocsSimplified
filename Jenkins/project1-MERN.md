@@ -60,3 +60,90 @@ and add jenkins user in docker s it can access docker ``` sudo systemctl restart
 
 ----------------------
 
+
+JENKINS CINFIGURATION :
+
+Firewall :
+for debian based it is ufw and for other it is firewalld or firewall-cmd
+
+```
+YOURPORT=8080
+PERM="--permanent"
+SERV="$PERM --service=jenkins"
+
+firewall-cmd $PERM --new-service=jenkins
+firewall-cmd $SERV --set-short="Jenkins ports"
+firewall-cmd $SERV --set-description="Jenkins port exceptions"
+firewall-cmd $SERV --add-port=$YOURPORT/tcp
+firewall-cmd $PERM --add-service=jenkins
+firewall-cmd --zone=public --add-service=http --permanent
+firewall-cmd --reload
+```
+
+
+installed :
+```
+Warnings Next Generation ,
+Lockable Resources plugin,
+Throttle Concurrent Builds plugin. .
+ copy artifacts  ,
+ Locale Plugin,
+ Performance Version  ,
+ pipeline graph view,
+ pipeline stage view,
+ blue ocean ,
+  Configuration as Code .,
+  thin backup ,
+  
+
+    Dark Theme Plugin - provides a dark theme for Jenkins. Supports configuration as code to select the theme configuration.
+
+    Material Theme Plugin - port of Afonso F’s Jenkins material theme to use Theme Manager.
+
+    Solarized Theme Plugin - provides Solarized (light and dark) themes.
+Simple Theme Plugin.
+
+login  Theme Plugin.
+
+
+See Git userContent plugin for how to manage these files through a Git repository.
+ Job Restrictions Plugin
+
+
+
+```
+ 
+
+
+
+Restrict project naming : unable to find this option .,
+jmeter installation is by linux commands ,
+
+
+
+
+sites : 
+```
+http://yourserver/jenkins/threadDump
+
+
+    BUILD ID URL/stop - aborts a Pipeline.
+
+    BUILD ID URL/term - forcibly terminates a build (should only be used if stop does not work).
+
+    BUILD ID URL/kill - hard kill a pipeline. This is the most destructive way to stop a pipeline and should only be used as a last resort.
+To see the time zone currently set, go to jenkins_server/systemInfo
+".../api/" URL where "..." portion is the data that it acts on.
+/restart and /safeRestart
+ navigate to JENKINS_URL/me/configure
+
+This feature can be accessed from "Manage Jenkins" > "Script Console".  Or by visiting the sub-URL /script on your Jenkins instance.
+
+$JENKINS_HOME/userContent, and these files are served from http://yourhost/jenkins/userContent.
+
+
+
+
+```
+
+=== securing jenkins afterwords remaining===
